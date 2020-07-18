@@ -1,0 +1,14 @@
+static Integer findFirstInconsistent(int[] array) {
+
+        int prevElement = array[0];
+
+        for (int i = 1; i < array.length; i++) {
+            if (array[i] - prevElement != 1) {
+                return array[i];
+            } else {
+                prevElement = array[i];
+            }
+        }
+
+        return null;
+    }
